@@ -1,0 +1,40 @@
+{
+  "name": "redux-se",
+  "version": "0.0.0",
+  "description": "Redux side effect middleware",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src/* || true",
+    "examples": "webpack --config examples/quickstart/webpack.config.js"
+  },
+  "keywords": [
+    "redux",
+    "side-effects",
+    "side",
+    "effects",
+    "async",
+    "promise",
+    "promises"
+  ],
+  "author": "domagoj@jercic.com",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.4.0",
+    "babel-plugin-es6-promise": "^1.1.1",
+    "babel-preset-es2015": "^6.24.0",
+    "eslint": "^3.17.1",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-plugin-flowtype": "^2.30.3",
+    "eslint-plugin-react": "^6.10.0",
+    "jest": "^19.0.2",
+    "redux": "^3.6.0"
+  },
+  "dependencies": {
+    "webpack": "^2.2.1"
+  }
+}

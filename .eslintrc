@@ -1,0 +1,6 @@
+{
+  "parser": "babel-eslint",
+  "globals": {"Promise": true},
+  "env": {"jest": true},
+  "extends": ["defaults/configurations/eslint"]
+}
