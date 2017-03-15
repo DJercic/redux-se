@@ -1,0 +1,18 @@
+{
+  "modulePathIgnorePatterns": [
+    "/lib/",
+    "node_modules/"
+  ],
+  "rootDir": "",
+  "roots": [
+    "<rootDir>/test"
+  ],
+  "transform": {
+    ".(js|jsx)": "<rootDir>/node_modules/babel-jest"
+   },
+   "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js|jsx)$",
+   "moduleFileExtensions": [
+        "jsx",
+        "js"
+     ]
+}

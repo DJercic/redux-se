@@ -1,6 +1,6 @@
 import {applyMiddleware, createStore, compose} from 'redux';
-import createMiddleware from './../middleware';
-import {effect} from '../effects';
+import createMiddleware from './../src/middleware';
+import {effect} from '../src/effects';
 
 describe('middleware tests', () => {
 

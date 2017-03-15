@@ -1,5 +1,5 @@
-import dispatchPromise from '../dispatchPromise';
-import {RESOLVE_PROP, REJECT_PROP} from '../constants';
+import dispatchPromise from '../src/dispatchPromise';
+import {RESOLVE_PROP, REJECT_PROP} from '../src/constants';
 
 describe('Test dispatchPromise', () => {
 

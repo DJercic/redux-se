@@ -1,4 +1,4 @@
-import {effect} from '../effects';
+import {effect} from '../src/effects';
 
 describe('Test effects helper functions', () => {
 

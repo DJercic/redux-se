@@ -1,20 +1,21 @@
 {
   "name": "redux-se",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Redux side effect middleware",
   "browser": "dist/redux.js",
   "module": "es/index.js",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib dist es coverage",
-    "test": "jest",
+    "test": "cross-env BABEL_ENV=commonjs jest --config .jestrc",
     "lint": "eslint src/* || true",
     "examples": "webpack --config examples/quickstart/webpack.config.js",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "build:umd": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -i src/index.js -o dist/redux-se.js",
     "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -i src/index.js -o dist/redux-se.min.js",
-    "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min"
+    "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
+    "prepublish": "npm run lint && npm run test && npm run build"
   },
   "keywords": [
     "redux",
