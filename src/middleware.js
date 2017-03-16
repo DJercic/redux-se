@@ -16,7 +16,8 @@ export default function createMiddleware(queue = []) {
         if (isPromise(result)) {
 
           if (actionContainsPromise(action)) {
-            result.then(action.resolve).catch(action.reject);
+            result.then(getResolveFn(action))
+              .catch(getRejectFn(action));
           }
         } else if (actionContainsPromise(action)) {
 
@@ -28,6 +29,14 @@ export default function createMiddleware(queue = []) {
   };
 }
 
+function getRejectFn(action) {
+  return action[REJECT_PROP];
+}
+
+function getResolveFn(action) {
+  return action[RESOLVE_PROP];
+}
+
 function actionContainsPromise(action) {
-  return  (isFunction(action[RESOLVE_PROP]) && isFunction(action[REJECT_PROP]));
+  return  (isFunction(getResolveFn(action)) && isFunction(getRejectFn(action)));
 }
