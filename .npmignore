@@ -3,3 +3,9 @@ src
 .vscode
 test
 examples
+.babelrc
+.eslintignore
+.eslintrc
+.gitignore
+.jestrc
+rollup.config.js
