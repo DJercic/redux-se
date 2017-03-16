@@ -1,6 +1,6 @@
 {
   "name": "redux-se",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Redux side effect middleware",
   "browser": "dist/redux.js",
   "module": "es/index.js",
