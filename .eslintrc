@@ -1,6 +1,6 @@
 {
   "parser": "babel-eslint",
-  "globals": {"Promise": true},
+  "globals": {"Promise": true, "setTimeout": true},
   "env": {"jest": true},
   "extends": ["defaults/configurations/eslint"]
 }
