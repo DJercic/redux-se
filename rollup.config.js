@@ -12,7 +12,9 @@ var config = {
       jsnext: true
     }),
     babel({
-      exclude: ['node_modules/**', 'src/__test__']
+      babelrc: false,
+      exclude: 'node_modules/**',
+      presets: ['es2015-rollup']
     }),
     replace({
       'process.env.NODE_ENV': JSON.stringify(env)
